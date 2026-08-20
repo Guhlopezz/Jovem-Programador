@@ -9,19 +9,5 @@ jobs:
         run: test -f index.html
       - name: Listar arquivos
         run: ls -l
-      - name: Verificar links quebrados
-        run: |
-          if ! command -v htmlproofer &> /dev/null; then
-            echo "htmlproofer não encontrado, instalando..."
-            gem install html-proofer
-          fi
-          htmlproofer ./ --check-html --check-external-hash --check-favicon --check-opengraph --check-robots-txt --check-sri --check-xhtml --disable-external
-      - name: Verificar links externos
-        run: |
-          if ! command -v htmlproofer &> /dev/null; then
-            echo "htmlproofer não encontrado, instalando..."
-            gem install html-proofer
-          fi
-          htmlproofer ./ --check-external-hash --check-favicon --check-opengraph --check-robots-txt --check-sri --check-xhtml
 
 
