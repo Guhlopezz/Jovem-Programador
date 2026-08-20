@@ -7,4 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verificar index.html
         run: test -f index.html
+      - name: Listar arquivos
+        run: ls -l
+
 
